@@ -1,0 +1,1602 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EL">
+<html>
+<title>Βοήθεια | familyWallet.gr</title>
+<head>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+<link rel="icon" type="favicon/png" href="../pics/favicon.png" />
+<style> 
+
+
+.body {
+	overflow-x: hidden;
+}
+
+.grid {
+	position: fixed;
+	top: 0px;
+	margin-left: -8px;
+	width: 100%;
+	height: 100%;
+	background-color: #696969;
+	opacity:.80;
+	-moz-opacity:.80; 
+	filter:alpha(opacity=80);
+	z-index: 11;
+	display: none;
+}
+
+.header_container {
+	z-index: 10;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #E97C30;
+    border-bottom: 1px solid #a1a1a1;
+	box-shadow: -10px 1px 5px #888888;
+	margin-left: -8px;
+	margin-top: -9px;
+    padding: 10px 15px; 
+    width: 100%;
+	height: 60px;
+}
+
+.logo {
+	border: 0px solid #a1a1a1;
+	float: left;
+	color: #0F243E;
+	margin-left: 60px;
+	margin-top: 5px;
+	padding: 0px 20px; 
+	width: 165px;
+	text-decoration: none;
+	font-family: 'Tangerine', serif;
+	font-weight: bold;
+    font-size: 60px;
+}
+
+.logo:hover {
+	color: #0F243E;
+}
+
+.logo_big {
+	text-decoration: none;
+	color: #0F243E;
+	font-family: 'Tangerine', serif;
+	font-weight: bold;
+    font-size: 60px;
+}
+
+.logo_big:hover {
+	color: #0F243E;
+}
+
+.logo_small {
+	text-decoration: none;
+	color: #0F243E;
+	font-family: 'Tangerine', serif;
+	font-weight: bold;
+    font-size: 60px;
+	display:none;
+	margin-left: 195px;
+	margin-top: -64px;
+}
+
+#logo_big_id:hover + #logo_small_id {
+	color: #0F243E	;
+	text-decoration: none;
+	font-family: 'Tangerine', serif;
+	font-weight: bold;
+    font-size: 60px;
+	display:block;
+}
+
+.account {
+	border: 0px solid #a1a1a1;
+	float: right;
+	width: 395px;
+	margin-right: 45px;
+}
+
+.account_mail {
+	border: 0px solid #0F243E;
+	float: left;
+	color: #0F243E;
+	margin-top: 7px;
+	font-family: 'Calibri Light','Gill Sans',  Arial, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.logout {
+	border: 1px solid #0F243E;
+	border-radius: 5px;
+	box-shadow: 1px 1px 10px #888888;
+	float: right;
+	background: #0F243E;
+	color: white;
+	text-decoration: none;
+	margin-right: 60px;
+	margin-top: 5px;
+	padding: 8px 22px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.logout:hover {
+    background: #45619D ;
+	color: white;
+}
+
+.logout: active {
+	color: #0F243E;
+    background: yellow;
+	
+}
+
+.account_menu {
+	border: 0px solid #a1a1a1;
+	float: right;
+	width: 400px;
+	margin-top: 11px;
+	color: #E9EAED;
+	font-family: 'Calibri Light','Gill Sans',  Arial, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.account_menu_choice {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	overflow: hidden;
+  
+	background: transparent;
+	color: #0F243E;
+	padding: 8px 7px;
+	margin-top: -12px;
+	text-decoration:none;
+	font-family: 'Calibri Light','Gill Sans',  Arial, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+
+.account_menu_choice:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #0F243E;
+	height: 4px;
+	-webkit-transform: translateY(4px);
+	transform: translateY(4px);
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.05s;
+	transition-duration: 0.05s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+
+.account_menu_choice:hover:before, .account_menu_choice:focus:before, .account_menu_choice:active:before {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.account_menu_choice_selected {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	overflow: hidden;
+  
+	background: transparent;
+	color: #0F243E;
+	padding: 8px 7px;
+	margin-top: -12px;
+	text-decoration:none;
+	font-family: 'Calibri Light','Gill Sans',  Arial, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+
+.account_menu_choice_selected:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #0F243E;
+	height: 4px;
+	-webkit-transform: translateX(0px);
+	transform: translateX(0px);
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.05s;
+	transition-duration: 0.05s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+.account_menu_choice_selected:hover:before, .account_menu_choice_selected:focus:before, .account_menu_choice_selected:active:before {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.main_body {
+	width: 100%;
+	height: 100%;
+	background: #E9EAED;
+	overflow-y:hidden;
+}
+
+.left_column {
+	top: 0px;
+	position: fixed;
+	border-right: 1px solid #a1a1a1;
+	padding-top: 15px;
+	background: #E9EAED;
+	box-shadow: 0px 1px 5px #888888;
+	margin-left: -8px;
+	margin-top: 67px;
+	width: 15%;
+	min-width: 200px;
+	max-width: 200px;
+	height: 100%;
+}
+
+.balance_title {
+	border: 0px solid #a1a1a1;
+	float: center;
+	width: 100%;
+	margin-top: 20px;
+	margin-left: 22px;
+	color: #282828;
+	font-family: 'Lato', serif;
+	font-size: 18px;
+	
+}
+
+.balance_euro {
+	border-top: 1px solid #a1a1a1;
+	float: center;
+	width: 75%;
+	margin-left: 24px;
+	color: #0F243E;
+	word-spacing: 15px;
+	font-family: 'Lato', serif;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.transaction {
+	float:center;
+}
+
+.transaction_new {
+	border: 1px solid #0F243E;
+	box-shadow: 1px 1px 10px #888888;
+	background: #0F243E;
+	color: white;
+	text-decoration: none;
+	width: 180px;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding: 8px 11px;
+	border-radius: 5px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	
+}
+
+.transaction_new:hover {
+    background-color: #45619D ;
+	color: white;
+}
+
+.transaction {
+	border: 1px solid #0F243E;
+	box-shadow: 1px 1px 10px #888888;
+	background: #0F243E;
+	color: white;
+	text-decoration: none;
+	
+	width: 161px;
+	margin-left: 15px;
+	margin-top: 5px;
+	padding: 2px 0px;
+	border-radius: 5px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	
+}
+
+.transaction:hover {
+	background: #45619D ;
+	color: white;
+}
+
+.transaction:active {
+	margin-left: 8px;
+	margin-top: 6px;
+}
+
+.right_column {
+	z-index: 1;
+	background: #E9EAED;
+	border : 0px solid #a1a1a1;
+	padding-top: 15px;
+	margin-top: 67px;
+	margin-left: 193px;
+	width: 85%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+.main_menu {
+	border: 0px solid #0F243E;
+	width: 900px;
+	height: 70px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.main_menu_choice {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	overflow: hidden;
+  
+	background: #E1E1E1;
+	color: #0F243E;
+	padding: 1px 7px;
+	border: 1px solid #0F243E;
+	border-radius: 4px;
+	box-shadow: 2px 2px 1px #888888;
+	text-decoration:none;
+	font-family: 'Calibri Light','Gill Sans',  Arial, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.main_menu_choice:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #0F243E;
+	height: 4px;
+	-webkit-transform: translateY(4px);
+	transform: translateY(4px);
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.05s;
+	transition-duration: 0.05s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+.main_menu_choice:hover:before, .main_menu_choice:focus:before, .main_menu_choice:active:before {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.main_menu_choice_selected {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	overflow: hidden;
+  
+	background: #E1E1E1;
+	color: #0F243E;
+	padding: 1px 7px;
+	border: 1px solid #0F243E;
+	border-radius: 4px;
+	box-shadow: 2px 2px 1px #888888;
+	text-decoration:none;
+	font-family: 'Calibri Light','Gill Sans',  Arial, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+
+.main_menu_choice_selected:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #0F243E;
+	height: 4px;
+	-webkit-transform: translateX(0px);
+	transform: translateX(0px);
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.05s;
+	transition-duration: 0.05s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+.main_menu_choice_selected:hover:before, .main_menu_choice_selected:focus:before, .main_menu_choice_selected:active:before {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.pay_popup {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    margin-top: -19em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+	border-radius: 5px;
+    width:500px;
+	display:none;
+	background: #F8F8F8;
+	z-index: 15;
+}
+
+.pay_box_body {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 100%;
+	height:100%;
+    background: #F8F8F8;
+    padding: 30px 30px 20px 30px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #666;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.pay_box_body h1 {
+    font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 20px 0px 20px 40px;
+    display: block;
+    margin: -30px -30px 10px -30px;
+    color: #FFF;
+    background: #0F243E;
+    text-shadow: 1px 1px 1px #949494;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+}
+
+.pay_box_body h1>span {
+    display: block;
+    font-size: 11px;
+    color: #FFF;
+}
+
+.pay_box_body label {
+    display: block;
+    margin: 0px 0px 5px;
+}
+
+.pay_box_body label>span {
+    float: left;
+    margin-top: 10px;
+    color: #0F243E;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+}
+
+.pay_box_body input[type="text"], .pay_box_body input[type="email"], .pay_box_body input[type="password"] {
+    color: #0F243E;
+    height: 25px;
+    line-height:5px;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid #d1d1d1;
+    background: #FBFBFB;
+    outline: 1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.pay_box_body input[type="tritous"] {
+    color: #0F243E;
+    height: 25px;
+    line-height:5px;
+    width: 267px;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid #d1d1d1;
+    background: #FBFBFB;
+    outline: 1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.pay_box_body input[type="number"] {
+    color: #0F243E;
+    height: 25px;
+    line-height:5px;
+    width: 267px;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid #d1d1d1;
+    background: #FBFBFB;
+    outline: 1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.pay_box_body input[type="date"] {
+    color: #0F243E;
+    height: 25px;
+    line-height:15px;
+    width: 267px;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid #d1d1d1;
+    background: #FBFBFB;
+    outline: 1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.pay_box_body textarea{
+    height: 60px;
+	width: 280px;
+    padding-top: 0px;
+	color: #0F243E;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.pay_box_body select {
+    text-indent: 0.01px;
+    text-overflow: '';
+	border-radius: 3px;
+    width:280px;
+    height:30px;
+
+}
+
+.pay_box_body input[type="radio"] {
+	color: #0F243E;
+	background: #FBFBFB;
+    outline: 1;
+    border: 2px solid #d1d1d1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+
+
+.pay_box_submit {	
+    background-color: #0F243E;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border: none;
+	text-decoration: none;
+	margin-top:10px;
+    padding: 10px 25px 10px 25px;
+	float:right;
+    color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.pay_box_submit:hover {
+    background-color:#45619D;
+}
+
+.pay_box_cancel {	
+    background-color: #0F243E;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border: none;
+	text-decoration: none;
+	margin-top:10px;
+	margin-right:10px;
+    padding: 10px 25px 10px 25px;
+	float:right;
+    color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.pay_box_cancel:hover {
+    background-color:#45619D;
+}
+
+.pay_confirmation {
+	position: fixed;
+	top: 50%;
+    left: 50%;
+    margin-top: -8em; /*set to a negative number 1/2 of your height*/
+    margin-left: -13em; /*set to a negative number 1/2 of your width*/
+	border-radius: 5px;
+    width:500px;
+    height:90px;
+	color: #0F243E;
+	background: white;
+	padding: 10px;
+	z-index: 15;
+	display:none;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.get_popup {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    margin-top: -19em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+	border-radius: 5px;
+    width:500px;
+    
+	display:none;
+	background: #F8F8F8;
+	z-index: 15;
+}
+
+.get_box_body {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 100%;
+	height:100%;
+    background: #F8F8F8;
+    padding: 30px 30px 20px 30px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #666;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.get_box_body h1 {
+    font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 20px 0px 20px 40px;
+    display: block;
+    margin: -30px -30px 10px -30px;
+    color: #FFF;
+    background: #0F243E;
+    text-shadow: 1px 1px 1px #949494;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+}
+
+.get_box_body h1>span {
+    display: block;
+    font-size: 11px;
+    color: #FFF;
+}
+
+.get_box_body label {
+    display: block;
+    margin: 0px 0px 5px;
+}
+
+.get_box_body label>span {
+    float: left;
+    margin-top: 10px;
+    color: #0F243E;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+}
+
+.get_box_body input[type="text"], .get_box_body input[type="email"], .get_box_body input[type="password"] {
+    color: #0F243E;
+    height: 25px;
+    line-height:5px;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid #d1d1d1;
+    background: #FBFBFB;
+    outline: 1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.get_box_body input[type="tritous"] {
+    color: #0F243E;
+    height: 25px;
+    line-height:5px;
+    width: 267px;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid #d1d1d1;
+    background: #FBFBFB;
+    outline: 1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.get_box_body input[type="number"] {
+    color: #0F243E;
+    height: 25px;
+    line-height:5px;
+    width: 267px;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid #d1d1d1;
+    background: #FBFBFB;
+    outline: 1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.get_box_body input[type="date"] {
+    color: #0F243E;
+    height: 25px;
+    line-height:15px;
+    width: 267px;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid #d1d1d1;
+    background: #FBFBFB;
+    outline: 1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.get_box_body textarea{
+    height:60px;
+	width:280px;
+    padding-top: 0px;
+	color: #0F243E;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.get_box_body select {
+    text-indent: 0.01px;
+    text-overflow: '';
+	border-radius: 3px;
+    width:280px;
+    height:30px;
+
+}
+
+.get_box_body input[type="radio"] {
+	color: #0F243E;
+	background: #FBFBFB;
+    outline: 1;
+    border: 2px solid #d1d1d1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+
+
+.get_box_submit {	
+    background-color: #0F243E;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border: none;
+	text-decoration: none;
+	margin-top:10px;
+    padding: 10px 25px 10px 25px;
+	float:right;
+    color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.get_box_submit:hover {
+    background-color:#45619D;
+}
+
+.get_box_cancel {	
+    background-color: #0F243E;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border: none;
+	text-decoration: none;
+	margin-top:10px;
+	margin-right:10px;
+    padding: 10px 25px 10px 25px;
+	float:right;
+    color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.get_box_cancel:hover {
+    background-color:#45619D;
+}
+
+.get_confirmation {
+	position: fixed;
+	top: 50%;
+    left: 50%;
+    margin-top: -8em; /*set to a negative number 1/2 of your height*/
+    margin-left: -13em; /*set to a negative number 1/2 of your width*/
+	border-radius: 5px;
+    width:500px;
+    height:90px;
+	color: #0F243E;
+	background: white;
+	padding: 10px;
+	z-index: 15;
+	display:none;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.ok {	
+    background-color: #0F243E;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border: none;
+	text-decoration: none;
+	margin-top:25px;
+	margin-right:60px;
+    padding: 7px 12px 7px 12px;
+	float:right;
+    color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.ok:hover {
+    background-color:#45619D;
+}
+
+img.top {
+    vertical-align: text-top;
+	padding-right: 15px;
+}
+
+.help {
+	border: 0px solid #a1a1a1;
+	width: 60%;
+	margin-left: -50px;
+	margin-top:15px;
+}
+
+.help_title {
+	border: 0px solid #0F243E;
+
+	margin-top:20px;
+	height: 30px;
+	color: #0F243E;
+	font-family: 'Calibri Light','Gill Sans',  Arial, sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.help_box {
+	border: 1px solid white;
+	box-shadow: 1px 1px 10px #888888;
+	border-radius:6px;
+	margin-left: 20px;
+	margin-top:30px;
+	width: 100px;
+	height:100px;
+	background-color: white;
+	color: #0F243E;
+	font-family: 'Calibri Light','Gill Sans',  Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.settings {
+	border-radius: 5px;
+    width:700px;
+	height:440px;
+	margin-left: 60px;
+	margin-top: 15px;
+	background: #F8F8F8;
+	z-index: 15;
+}
+
+.settings_body {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 100%;
+	height:100%;
+    background: #F8F8F8;
+    padding: 30px 30px 20px 30px;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #666;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.settings_body h1 {
+    font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 20px 0px 20px 40px;
+    display: block;
+    margin: -30px -30px 10px -30px;
+    color: #FFF;
+    background: #0F243E;
+    text-shadow: 1px 1px 1px #949494;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+}
+
+.settings_body h1>span {
+    display: block;
+    font-size: 11px;
+    color: #FFF;
+}
+
+.settings_body label {
+    display: block;
+    margin: 0px 0px 5px;
+}
+
+.settings_body label>span {
+    float: left;
+    margin-top: 10px;
+    color: #0F243E;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+}
+
+.settings_body input[type="text"], .pay_box_body input[type="email"], .pay_box_body input[type="password"] {
+    color: #0F243E;
+    height: 25px;
+    line-height:5px;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid #d1d1d1;
+    background: #FBFBFB;
+    outline: 1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.settings_body input[type="tritous"] {
+    color: #0F243E;
+    height: 25px;
+    line-height:5px;
+    width: 267px;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid #d1d1d1;
+    background: #FBFBFB;
+    outline: 1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.settings_body input[type="number"] {
+    color: #0F243E;
+    height: 25px;
+    line-height:5px;
+    width: 267px;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid #d1d1d1;
+    background: #FBFBFB;
+    outline: 1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.settings_body input[type="date"] {
+    color: #0F243E;
+    height: 25px;
+    line-height:15px;
+    width: 267px;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid #d1d1d1;
+    background: #FBFBFB;
+    outline: 1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.settings_body textarea{
+    height: 60px;
+	width: 280px;
+    padding-top: 0px;
+	color: #0F243E;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.settings_body select {
+    text-indent: 0.01px;
+    text-overflow: '';
+	border-radius: 3px;
+    width:280px;
+    height:30px;
+
+}
+
+.settings_body input[type="radio"] {
+	color: #0F243E;
+	background: #FBFBFB;
+    outline: 1;
+    border: 2px solid #d1d1d1;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 11px 1px 2px rgba(238, 238, 238, 0.2);
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+
+
+.settings_submit {	
+    background-color: #0F243E;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border: none;
+	text-decoration: none;
+	margin-top:10px;
+    padding: 10px 25px 10px 25px;
+	float:right;
+    color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.settings_submit:hover {
+    background-color:#45619D;
+}
+
+.settings_cancel {	
+    background-color: #0F243E;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border: none;
+	text-decoration: none;
+	margin-top:10px;
+	margin-right:10px;
+    padding: 10px 25px 10px 25px;
+	float:right;
+    color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.settings_cancel:hover {
+    background-color:#45619D;
+}
+
+.help_popup {
+	position: absolute;
+	top: 75%;
+    left: 50%;
+    margin-top: -19em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+	border-radius: 5px;
+    width:500px;
+
+	display:none;
+	background: #F8F8F8;
+	z-index: 15;
+}
+</style>
+
+<script type="text/javascript">
+
+
+function showTransactionChoices() {
+
+   if (document.getElementById("transaction_choice1").style.display=="block") {
+		document.getElementById("transaction_choice1").style.display="none"
+		document.getElementById("transaction_choice2").style.display="none";
+		
+		document.getElementById("transaction_new_id").style.color="white";
+		document.getElementById("transaction_new_id").style.background="#0F243E";
+	}
+   else {
+		document.getElementById("transaction_choice1").style.display="block"
+		document.getElementById("transaction_choice2").style.display="block";
+		
+		document.getElementById("transaction_new_id").style.color="white";
+		document.getElementById("transaction_new_id").style.background="#0F243E";
+    }
+}
+
+function Grid() {
+	
+	if (document.getElementById("grid_id").style.display=="block") {
+		document.getElementById("grid_id").style.display="none";
+		document.getElementById("pay_id").style.display="none";
+		document.getElementById("pay_confirmation_id").style.display="none";
+		document.getElementById("get_id").style.display="none";
+		document.getElementById("get_confirmation_id").style.display="none";
+		document.getElementById("help_family_id").style.display="none";
+		document.getElementById("help_transactions_id").style.display="none";
+		
+	}
+   else {
+		document.getElementById("grid_id").style.display="block";
+    }
+}
+
+function showPayPopUp() {
+	document.getElementById("grid_id").style.display="block";
+	document.getElementById("pay_id").style.display="block";
+}
+
+function closePayPopUp() {
+	document.getElementById("pay_id").style.display="none";
+	document.getElementById("pay_confirmation_id").style.display="block";
+}
+
+function showGetPopUp() {
+	document.getElementById("grid_id").style.display="block";
+	document.getElementById("get_id").style.display="block";
+}
+
+function closeGetPopUp() {
+	document.getElementById("get_id").style.display="none";
+	document.getElementById("get_confirmation_id").style.display="block";
+}
+
+function showHelpTransactions() {
+	document.getElementById("grid_id").style.display="block";
+	document.getElementById("help_transactions_id").style.display="block";
+}
+
+function showHelpFamily() {
+	document.getElementById("grid_id").style.display="block";
+	document.getElementById("help_family_id").style.display="block";
+}
+
+function onoffToPayment(clickedradio) {
+	if  (clickedradio.checked && clickedradio.value=='1')
+	{
+		document.getElementById("family").style.display="block";
+		document.getElementById("tritous").style.display="none";
+	}
+	else
+	{
+		document.getElementById("family").style.display="none";
+		document.getElementById("tritous").style.display="block";
+	}
+}
+
+
+
+function onoffDatePayment(clickedradio) {
+	if  (clickedradio.checked && clickedradio.value=='1')
+	{
+		document.getElementById("date1").style.display="none";
+	}
+	else
+	{
+		document.getElementById("date1").style.display="block";
+	}
+}
+
+function onoffDateGetPayment(clickedradio) {
+	if  (clickedradio.checked && clickedradio.value=='1')
+	{
+		document.getElementById("date2").style.display="none";
+	}
+	else
+	{
+		document.getElementById("date2").style.display="block";
+	}
+}
+
+function onoffDayPayment(clickedradio) {
+	if  (clickedradio.checked && clickedradio.value=='1')
+	{
+		document.getElementById("day1").style.display="none";
+	}
+	else if (clickedradio.checked && clickedradio.value=='0')
+	{
+		document.getElementById("day1").style.display="none";
+	}
+	else if (clickedradio.checked && clickedradio.value=='2')
+	{
+		document.getElementById("day1").style.display="none";
+	}
+	else
+	{
+		document.getElementById("day1").style.display="block";
+	}
+}
+
+function onoffDayGetPayment(clickedradio) {
+	if  (clickedradio.checked && clickedradio.value=='1')
+	{
+		document.getElementById("day2").style.display="none";
+	}
+	else if (clickedradio.checked && clickedradio.value=='0')
+	{
+		document.getElementById("day2").style.display="none";
+	}
+	else if (clickedradio.checked && clickedradio.value=='2')
+	{
+		document.getElementById("day2").style.display="none";
+	}
+	else
+	{
+		document.getElementById("day2").style.display="block";
+	}
+}
+
+
+
+</script>
+
+
+</head>
+<body>
+
+<a id="grid_id" style="cursor:pointer" onclick="Grid()" class="grid"></a>
+
+<div id="pay_id" class="pay_popup">
+	<div class="pay_box">
+			<form action="" method="post" class="pay_box_body">
+				<h1>Πληρωμή
+					<span>Συμπληρώστε την παρακάτω φόρμα για την καταχώρηση του εξόδου σας.</span>
+				</h1>
+				
+				<label>
+					<span>Προς:</span>
+					<br/><br/><br/>
+					<label><input type="radio" name="To" onclick="onoffToPayment(this)" value="1">Μέλος Οικογένειας</label>
+					<label><input type="radio" name="To" onclick="onoffToPayment(this)" value="2">Τρίτους</label>
+					<div id=family style='display:none'>
+						<br/>
+						<select name="selection">
+							<option value="Γιώργος">Γιώργος</option>
+							<option value="Πηνελόπη">Πηνελόπη</option>
+							<option value="Νίκος">Νίκος</option>
+							<option value="Μαρία">Μαρία</option>
+						</select>
+					</div>
+					<div id=tritous style='display:none'>
+						<br/>
+						<input id="name" type="tritous" name="name"/>
+					</div>
+				</label>
+				<label>
+					<span>Ποσό:</span><br/><br/><br/>
+					<input id="number" type="number" name="amount" /> EUR
+				</label>
+				<label>
+					<span>Περιγραφή:</span><br/><br/><br/>
+					<textarea id="message" name="message" placeholder="Γράψτε κάτι για τη συναλλαγή..."></textarea>
+				</label>
+				<label>
+					<span>Ημερομηνία Συναλλαγής:</span><br/><br/><br/>
+					<label><input type="radio" name="Date" onclick="onoffDatePayment(this)" value="1"/>Σήμερα</label>
+					<label><input type="radio" name="Date" onclick="onoffDatePayment(this)" value="2">Στις:</label><div id=date1 style='display:none'><br/><input id="name" type="date" name="name"/></div>
+				</label>
+				<label>
+					<span>Θέλω η συναλλαγή να επαναλαμβάνεται:</span><br/><br/><br/>
+					<label><input type="radio" name="Day" onclick="onoffDayPayment(this)" value="0">Μόνο τώρα</label>
+					<label><input type="radio" name="Day" onclick="onoffDayPayment(this)" value="1">Την πρώτη εργάσιμη κάθε μήνα</label>
+					<label><input type="radio" name="Day" onclick="onoffDayPayment(this)" value="2">Την τελευταία εργάσιμη κάθε μήνα</label>
+					<label><input type="radio" name="Day" onclick="onoffDayPayment(this)" value="3">Κάθε μήνα στις:</label>
+					<div id=day1 style='display:none'><br/>
+						<select name="selection">
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>
+						</select>
+					</div>
+				</label>
+				
+				<label>
+					<a style="cursor:pointer" onclick="closePayPopUp()" style="float:right" class="pay_box_submit">Καταχώρηση Συναλλαγής</a>
+					<a style="cursor:pointer" onclick="Grid()" class="pay_box_cancel">Άκυρο</a>
+				</label>  <br/><br/><br/>
+			</form>
+	</div>
+</div>
+
+<div id="pay_confirmation_id" class="pay_confirmation">
+	<img class="top" style="float:left" src="../pics/tick.png" >Η συναλλαγή σας καταχωρήθηκε με επιτυχία!
+	<a style="cursor:pointer" onclick="Grid()"class="ok">ΟΚ</a>
+</div>
+
+<div id="get_id" class="get_popup">
+	<div class="get_box">
+			<form action="" method="post" class="get_box_body">
+				<h1>Είσπραξη
+					<span>Συμπληρώστε την παρακάτω φόρμα για την καταχώρηση του εσόδου σας.</span>
+				</h1>
+				
+				<label>
+					<span>Από:</span>
+					<br/><br/><br/>
+					<input id="name" type="tritous" name="name"/>
+				</label>
+				<label>
+					<span>Ποσό:</span><br/><br/><br/>
+					<input id="number" type="number" name="amount" /> EUR
+				</label>
+				<label>
+					<span>Περιγραφή:</span><br/><br/><br/>
+					<textarea id="message" name="message" placeholder="Γράψτε κάτι για τη συναλλαγή..."></textarea>
+				</label>
+				<label>
+					<span>Ημερομηνία Συναλλαγής:</span><br/><br/><br/>
+					<label><input type="radio" name="Date" onclick="onoffDateGetPayment(this)" value="1"/>Σήμερα</label>
+					<label><input type="radio" name="Date" onclick="onoffDateGetPayment(this)" value="2">Στις:</label><div id=date2 style='display:none'><br/><input id="name" type="date" name="name"/></div>
+				</label>
+				<label>
+					<span>Θέλω η συναλλαγή να επαναλαμβάνεται:</span><br/><br/><br/>
+					<label><input type="radio" name="Day" onclick="onoffDayGetPayment(this)" value="0">Μόνο τώρα</label>
+					<label><input type="radio" name="Day" onclick="onoffDayGetPayment(this)" value="1">Την πρώτη εργάσιμη κάθε μήνα</label>
+					<label><input type="radio" name="Day" onclick="onoffDayGetPayment(this)" value="2">Την τελευταία εργάσιμη κάθε μήνα</label>
+					<label><input type="radio" name="Day" onclick="onoffDayGetPayment(this)" value="3">Κάθε μήνα στις:</label>
+					<div id=day2 style='display:none'><br/>
+						<select name="selection">
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>
+						</select>
+					</div>
+				</label>
+				
+				<label>
+					<a style="cursor:pointer" onclick="closeGetPopUp()" style="float:right" class="get_box_submit">Καταχώρηση Συναλλαγής</a>
+					<a style="cursor:pointer" onclick="Grid()" class="get_box_cancel">Άκυρο</a>
+				</label>  <br/><br/><br/>
+			</form>
+	</div>
+</div>
+
+<div id="get_confirmation_id" class="get_confirmation">
+	<img class="top" style="float:left" src="../pics/tick.png" >Η συναλλαγή σας καταχωρήθηκε με επιτυχία!
+	<a style="cursor:pointer" onclick="Grid()" class="ok">ΟΚ</a>
+</div>
+
+<div id="help_transactions_id" class="help_popup">
+	<div class="get_box">
+			<form action="" method="post" class="get_box_body">
+				<h1>Βοήθεια - Συναλλαγές
+					<span></span>
+				</h1>
+				
+				<label>
+					<span>Καταχωρήστε όλες τις οικονομικές σας συναλλαγές. Πληρωμή για καταχώρηση εξόδου και είσπραξη για καταχώρηση εσόδου.<br/> <br/>Μπορείτε επίσης να προσθέσετε μία μηνιαία συναλλαγή και να καταχωρείτε κάθε μήνα την ημέρα που επιθυμείτε.</span>
+					<br/><br/><br/>
+				</label>
+					
+				<label>
+					<a href="#" style="cursor:pointer" onclick="Grid()" style="margin-top:-5px" class="ok">ΟΚ</a><br/><br/><br/>
+				</label>  <br/><br/><br/><br/><br/>
+			</form>
+	</div>
+</div>
+
+<div id="help_family_id" class="help_popup">
+	<div class="get_box">
+			<form action="" method="post" class="get_box_body">
+				<h1>Βοήθεια - Οικογένεια
+					<span></span>
+				</h1>
+				
+				<label>
+					<span>Δημιουργήστε οικογενειακό λογαριασμό, προσθέστε μέλη και δείτε όλες τις οικονομικές τους συναλλαγές. <br/><br/>Ο δημιουργός του οικογενειακού λογαριασμού είναι και διαχειριστής. Μόνο αυτός μπορεί να δει τις συναλλαγές των μελών της οικογένειας.</span>
+					<br/><br/><br/>
+				</label>
+					
+				<label>
+					<a href="#" style="cursor:pointer" onclick="Grid()" style="margin-top:-5px" class="ok">ΟΚ</a><br/><br/><br/><br/><br/><br/><br/><br/>
+				</label>  
+			</form>
+	</div>
+</div>
+
+
+<div class="header_container">
+
+	<div class="logo">
+		<a id="logo_big_id" href="../html_pages/Overview.html" class="logo_big">familyWallet</a>
+		<a id="logo_small_id" href="#" onClick="window.location.reload(true );" class="logo_small">.gr</a>
+	</div>
+	
+	<div class="account">
+		<div class="account_mail">
+			Καλωσήρθες, test@familywallet.gr
+		</div>
+		<a href="../Index.html" class="logout">Αποσύνδεση</a>
+		<div class="account_menu">	
+			<a href="../html_pages/Overview.html" class="account_menu_choice">MyWallet</a>
+			<a href="../html_pages/Settings.html" class="account_menu_choice">Ρυθμίσεις</a>
+			<a href="../html_pages/Help_Menu.html" class="account_menu_choice_selected">Βοήθεια</a>	
+		</div>
+	</div>
+
+</div>
+
+<div class="main_body">
+	<div class="left_column">
+		<div class="balance_title">
+			Διαθέσιμο Υπόλοιπο
+		</div>
+		<div class="balance_euro">
+			EUR 510.00
+		</div>
+		<br/><br/><br/>
+		<a id="transaction_new_id" style="cursor:pointer" onclick="showTransactionChoices()" class="transaction_new" >Νέα Συναλλαγή</a></li><br/>
+		<a id="transaction_choice1" style="cursor:pointer;display:none;margin-top:14px;" onclick="showPayPopUp()" class="transaction" > <img src="../pics/up_arrow.png" width="25px" height="28px">  Πληρωμή</a></li>
+		<a id="transaction_choice2" style="cursor:pointer;display:none;" onclick="showGetPopUp()" class="transaction" > <img src="../pics/down_arrow.png" width="25px" height="28px">  Είσπραξη</a></li>
+	</div>
+
+	<div class="right_column">
+		
+
+		<div id="settings_id" class="settings">
+			<form action="" method="post" class="settings_body">
+				<h1><img src="../pics/help.png" style="width:30px; height:30px"> Βοήθεια
+				</h1>
+				<div class="help">
+					<div class="help_box" style="margin-left:80px;margin-top:36px;">
+						<img src="../pics/begin.png" style="width: 100px;height:100px;"><a style="cursor:pointer" onclick="showHelpBegin()" style="font-size:14px;color: #0F243E;">Ξεκινώντας<br/><u> Μία βοήθεια για την εγγραφή</u></a>
+						
+						<div class="help_box" style="margin-left:250px;margin-top:-155px;">
+							<img src="../pics/transactions.png" style="width: 100px;height:100px;" ><a style="cursor:pointer" onclick="showHelpTransactions()" style="font-size:14px;color: #0F243E;">Συναλλαγές<br/><u>Πληρωμή<br/>Είσπραξη</u></a>
+							
+							<div class="help_box" style="margin-left:250px;margin-top:-158px;">
+								<img src="../pics/account.png" style="width: 100px;height:100px;" ><a style="cursor:pointer" onclick="showHelpFamily()" style="font-size:14px;color: #0F243E;">Οικογένεια<br/><u>Ρόλοι Διαχειριστή</u></a>
+							</div>	
+							
+						</div>
+					</div>
+					
+					<div class="help_box" style="margin-left:80px;margin-top:106px;">
+						<img src="../pics/security.png" style="width: 100px;height:100px;">Ασφάλεια<br/><a style="cursor:pointer" onclick="showHelpSecurity()" style="font-size:14px;color: #0F243E;"><a href="#" style="font-size:14px;color: #0F243E;"><u>Χρήσιμες συμβουλές</u></a>
+						
+						<div class="help_box" style="margin-left:250px;margin-top:-155px;">
+							<img src="../pics/login.png" style="width: 100px;height:100px;" >Σύνδεση<br/><a style="cursor:pointer" onclick="showHelpLogin()" style="font-size:14px;color: #0F243E;"><a href="#" style="font-size:14px;color: #0F243E;"><u>Βοήθεια κατά τη σύνδεση</u></a>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			</form>	
+		</div>
+
+		
+		
+		
+		
+		<br/><br/><br/><br/><br/>
+				
+		
+	</div>
+</div>
+
+</body>
+</html>
